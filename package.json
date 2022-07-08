@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "common": "lerna --scope=@spike/common run build --stream --",
     "android": "lerna --scope=App run android --stream --",
     "ios": "lerna --scope=App run ios --stream --",
     "web": "lerna --scope=web run start --stream --",

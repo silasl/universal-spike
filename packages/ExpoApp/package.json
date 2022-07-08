@@ -26,5 +26,9 @@
     "expo-yarn-workspaces": "^2.0.0",
     "typescript": "~4.3.5"
   },
+  "workspaces": {
+    "packages": [],
+    "nohoist": ["react", "react/**", "react-dom", "react-dom/**"]
+  },
   "private": true
 }

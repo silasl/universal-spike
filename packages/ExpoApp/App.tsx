@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { StyleSheet, View, Text } from 'react-native';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 // import { sharedVariable } from '@spike/common'
-      // <Text>{sharedVariable}</Text>
 
 import Countries from './src/screens/countries'
 
@@ -18,6 +17,7 @@ export default function App() {
     <View style={styles.container}>
       <ApolloProvider client={client}>
         <Countries />
+        { /* <Text>{sharedVariable}</Text> */ }
       </ApolloProvider>
     </View>
   );
