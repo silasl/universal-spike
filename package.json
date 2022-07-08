@@ -6,16 +6,26 @@
     "ios": "lerna --scope=App run ios --stream --",
     "web": "lerna --scope=web run start --stream --",
     "expo": "lerna --scope=ExpoApp run start --stream --",
+    "server": "lerna --scope=server run start --stream --",
     "postinstall": "cd ./packages/ExpoApp && expo-yarn-workspaces postinstall"
   },
   "workspaces": {
-    "packages": ["packages/*"],
-    "nohoist": ["**/react-native", "**/react-native/**", "**/expo", "**/expo/**"]
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react-native",
+      "**/react-native/**",
+      "**/expo",
+      "**/expo/**"
+    ]
   },
   "dependencies": {
     "metro-config": "^0.56.0"
   },
   "devDependencies": {
-    "lerna": "^5.1.7"
+    "@types/node": "^18.0.3",
+    "lerna": "^5.1.7",
+    "typescript": "^4.7.4"
   }
 }
