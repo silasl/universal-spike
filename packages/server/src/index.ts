@@ -1,30 +1,27 @@
 import { ApolloServer, gql } from 'apollo-server'
 
 const typeDefs = gql`
-  type Book {
-    title: String
-    author: String
+  type Store {
+    name: String
   }
   
   type Query {
-    books: [Book]
+    stores: [Store]
   }
 `
 
-const books = [
+const stores = [
   {
-    title: 'The Awakening',
-    author: 'Kate Chopin',
+    name: 'store 1',
   },
   {
-    title: 'City of Glass',
-    author: 'Paul Auster',
+    name: 'store 2',
   },
 ]
 
 const resolvers = {
   Query: {
-    books: () => books,
+    stores: () => stores,
   },
 }
 

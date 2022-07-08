@@ -1,9 +1,20 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+
+import Countries from './src/screens/countries'
 
 export default function App() {
+  const cache = new InMemoryCache();
+  const client = new ApolloClient({
+    uri: 'https://countries.trevorblades.com/',
+    cache
+  });
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <ApolloProvider client={client}>
+        <Countries />
+      </ApolloProvider>
     </View>
   );
 }
