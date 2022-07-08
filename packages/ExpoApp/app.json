@@ -20,9 +20,6 @@
     "ios": {
       "supportsTablet": true
     },
-    "packagerOpts": {
-      "config": "metro.config.js"
-    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
@@ -31,6 +28,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js"
     }
   }
 }
