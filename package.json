@@ -1,0 +1,21 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "android": "lerna --scope=App run android --stream --",
+    "ios": "lerna --scope=App run ios --stream --",
+    "web": "lerna --scope=web run start --stream --",
+    "expo": "lerna --scope=ExpoApp run start --stream --",
+    "postinstall": "cd ./packages/ExpoApp && expo-yarn-workspaces postinstall"
+  },
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist": ["**/react-native", "**/react-native/**", "**/expo", "**/expo/**"]
+  },
+  "dependencies": {
+    "metro-config": "^0.56.0"
+  },
+  "devDependencies": {
+    "lerna": "^5.1.7"
+  }
+}
