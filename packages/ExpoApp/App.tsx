@@ -1,5 +1,9 @@
-import { StyleSheet, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+
+// import { sharedVariable } from '@spike/common'
+      // <Text>{sharedVariable}</Text>
 
 import Countries from './src/screens/countries'
 
